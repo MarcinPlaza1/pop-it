@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POP IT!</title>
+    <meta name="author" content="Marcin Płaza">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav__logo">NOT_A_BUBBLE.COM</div>
+        <div class="nav__toggle" id="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav__links" id="nav-links">
+            <div class="nav__logo-mobile">NOT_A_BUBBLE.COM</div>
+            <a href="#1" class="nav__link">ABOUT</a>
+            <a href="#2" class="nav__link">SALE</a>
+            <a href="#3" class="nav__link">CONTACTS</a>
+        </div>
+    </nav>
+    <header class="header">
+        <div class="header__content">
+            <h1>POP IT!</h1>
+            <p>Best Antistress Toy is the Endless toy bubble wrap!</p>
+            <button>BUY</button>
+        </div>
+    </header>
+    <div class="about-section" id="1">
+        <h2>What is Pop it exactly?</h2>
+        <p>This is a child's game, in which the process can be compared to the bursting of a bubble wrap. But unlike
+            film, pop-it can be pressed with the same characteristic sensations and sounds "endlessly": dozens of
+            silicone bubbles are simply squeezed out in the other direction.</p>
+    </div>
+    <div class="product-section" id="2">
+        <h2>Choose your Pop-It!</h2>
+        <div class="product-section__products">
+            <div class="product">
+                <img src="./images/square.png" alt="Product image">
+                <h3>Multicolored square</h3>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="./images/amongus.png" alt="Product image">
+                <h3>Among Us, marbled</h3>
+                <button>Buy</button>
+            </div>
+            <div class="product">
+                <img src="./images/round.png" alt="Product image">
+                <h3>Multicolored round</h3>
+                <button>Buy</button>
+            </div>
+        </div>
+    </div>
+    <div class="overlay-section" id="3">
+        <div class="overlay-section__content">
+            <div class="overlay-section__text">
+                <h2>Rules of the game</h2>
+                <p>Players take turns and click on the bumps. It is imperative to finish the row that you started. You
+                    can press a maximum of 3 bubbles at the same time (they must be near, you cannot press several
+                    pimples at once, if they are not close to each other) The task is to make the opponent go last. Who
+                    went last - he lost!</p>
+            </div>
+            <img src="./images/photo.jpg" alt="Small Image" class="overlay-section__image" />
+        </div>
+        <img src="./images/bg-grid.png" alt="Background Image" class="overlay-section__bg" />
+    </div>
+    <footer class="footer">
+        <nav class="footer__nav">
+            <div class="footer__logo">NOT_A_BUBBLE.COM</div>
+            <a href="#" class="footer__link">Payment Methods</a>
+            <a href="#" class="footer__link">Delivery</a>
+            <a href="#" class="footer__link">Wholesale</a>
+            <a href="#" class="footer__link">Contacts</a>
+        </nav>
+    </footer>
+    <button id="scrollToTop" title="Przewiń do góry"><i class="fa-solid fa-arrow-up"></i></button>
+    <script>
+        document.getElementById("nav-toggle").addEventListener("click", function () {
+            document.getElementById("nav-links").classList.toggle("show");
+        });
+    </script>
+    <script>
+        const myButton = document.getElementById("scrollToTop");
+
+        const scrollFunction = () => {
+            myButton.style.display = document.documentElement.scrollTop > 20 ? "block" : "none";
+        }
+
+        window.addEventListener('scroll', scrollFunction);
+
+        myButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+
+</html>
