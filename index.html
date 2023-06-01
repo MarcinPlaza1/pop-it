@@ -21,45 +21,46 @@
         </div>
         <div class="nav__links" id="nav-links">
             <div class="nav__logo-mobile">NOT_A_BUBBLE.COM</div>
-            <a href="#1" class="nav__link">ABOUT</a>
-            <a href="#2" class="nav__link">SALE</a>
-            <a href="#3" class="nav__link">CONTACTS</a>
+            <a href="#1" class="nav__link">Home</a>
+            <a href="#2" class="nav__link">ABOUT</a>
+            <a href="#3" class="nav__link">SALE</a>
+            <a href="#4" class="nav__link">CONTACTS</a>
         </div>
     </nav>
-    <header class="header">
+    <div class="header" id="1">
         <div class="header__content">
             <h1>POP IT!</h1>
             <p>Best Antistress Toy is the Endless toy bubble wrap!</p>
-            <button>BUY</button>
+            <button class="header__button"><span>BUY</span></button>
         </div>
-    </header>
-    <div class="about-section" id="1">
+    </div>
+    <div class="about-section" id="2">
         <h2>What is Pop it exactly?</h2>
         <p>This is a child's game, in which the process can be compared to the bursting of a bubble wrap. But unlike
             film, pop-it can be pressed with the same characteristic sensations and sounds "endlessly": dozens of
             silicone bubbles are simply squeezed out in the other direction.</p>
     </div>
-    <div class="product-section" id="2">
+    <div class="product-section" id="3">
         <h2>Choose your Pop-It!</h2>
         <div class="product-section__products">
             <div class="product">
-                <img src="./images/square.png" alt="Product image">
-                <h3>Multicolored square</h3>
-                <button>Buy</button>
+                <img src="./images/square.png" alt="Product image" class="product__image">
+                <h3 class="product__title">Multicolored square</h3>
+                <button class="product__button">Buy</button>
             </div>
             <div class="product">
-                <img src="./images/amongus.png" alt="Product image">
-                <h3>Among Us, marbled</h3>
-                <button>Buy</button>
+                <img src="./images/amongus.png" alt="Product image" class="product__image">
+                <h3 class="product__title">Among Us, marbled</h3>
+                <button class="product__button">Buy</button>
             </div>
             <div class="product">
-                <img src="./images/round.png" alt="Product image">
-                <h3>Multicolored round</h3>
-                <button>Buy</button>
+                <img src="./images/round.png" alt="Product image" class="product__image">
+                <h3 class="product__title">Multicolored round</h3>
+                <button class="product__button">Buy</button>
             </div>
         </div>
     </div>
-    <div class="overlay-section" id="3">
+    <div class="overlay-section" id="4">
         <div class="overlay-section__content">
             <div class="overlay-section__text">
                 <h2>Rules of the game</h2>
@@ -82,27 +83,7 @@
         </nav>
     </footer>
     <button id="scrollToTop" title="Przewiń do góry"><i class="fa-solid fa-arrow-up"></i></button>
-    <script>
-        document.getElementById("nav-toggle").addEventListener("click", function () {
-            document.getElementById("nav-links").classList.toggle("show");
-        });
-    </script>
-    <script>
-        const myButton = document.getElementById("scrollToTop");
 
-        const scrollFunction = () => {
-            myButton.style.display = document.documentElement.scrollTop > 20 ? "block" : "none";
-        }
-
-        window.addEventListener('scroll', scrollFunction);
-
-        myButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
-
 </html>
